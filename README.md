@@ -1,65 +1,63 @@
 Table of contents
 =================
 
-[Purpose 4](#purpose)
+[Purpose](#purpose)
 
-[Monitoring a TKGI environment 4](#monitoring-a-tkgi-environment)
+[Monitoring a TKGI environment](#monitoring-a-tkgi-environment)
 
-[Who monitors what? 4](#who-monitors-what)
+[Who monitors what?](#who-monitors-what)
 
-[Example Metrics 5](#example-metrics)
+[Example Metrics](#example-metrics)
 
-[Different tools for different layers
-5](#different-tools-for-different-layers)
+[Different tools for different layers](#different-tools-for-different-layers)
 
-[Flow of monitoring and troubleshooting
-6](#flow-of-monitoring-and-troubleshooting)
+[Flow of monitoring and troubleshooting](#flow-of-monitoring-and-troubleshooting)
 
-[Current Available options 6](#currently-available-options)
+[Current Available options](#currently-available-options)
 
-[Missing Layer from Monitoring 7](#missing-layer-from-monitoring)
+[Missing Layer from Monitoring](#missing-layer-from-monitoring)
 
-[TKGI Control Plane 8](#tkgi-control-plane)
+[TKGI Control Plane](#tkgi-control-plane)
 
-[Metrics to Monitor 8](#metrics-to-monitor)
+[Metrics to Monitor](#metrics-to-monitor)
 
-[Assumptions 9](#assumptions)
+[Assumptions](#assumptions)
 
-[Environment 9](#environment)
+[Environment](#environment)
 
-[Result -- How it would look 10](#result-how-it-would-look)
+[Result -- How it would look](#result-how-it-would-look)
 
-[vRealize Operations Manager 10](#vrealize-operations-manager)
+[vRealize Operations Manager](#vrealize-operations-manager)
 
-[vRealize Network Insight 11](#vrealize-network-insight)
+[vRealize Network Insight](#vrealize-network-insight)
 
-[vRealize Log Insight 14](#vrealize-log-insight)
+[vRealize Log Insight](#vrealize-log-insight)
 
-[Custom configuration details 16](#custom-configuration-details)
+[Custom configuration details](#custom-configuration-details)
 
-[vRealize Operations Manager 16](#vrealize-operations-manager-1)
+[vRealize Operations Manager](#vrealize-operations-manager-1)
 
-[Group Types 17](#group-types)
+[Group Types](#group-types)
 
-[Custom Groups 17](#custom-groups)
+[Custom Groups](#custom-groups)
 
-[Object Relationship 23](#object-relationship)
+[Object Relationship](#object-relationship)
 
-[Metric Configurations 24](#metric-configurations)
+[Metric Configurations](#metric-configurations)
 
-[Custom Dashboard 26](#custom-dashboard)
+[Custom Dashboard](#custom-dashboard)
 
-[vRealize Network Insight 26](#vrealize-network-insight-1)
+[vRealize Network Insight](#vrealize-network-insight-1)
 
-[Defining the Application 26](#defining-the-application)
+[Defining the Application](#defining-the-application)
 
-[vRealize Log Insight 30](#vrealize-log-insight-1)
+[vRealize Log Insight](#vrealize-log-insight-1)
 
-[Conclusion 34](#conclusion)
+[Conclusion](#conclusion)
 
-[Acknowledgement 34](#acknowledgement)
+[Acknowledgement](#acknowledgement)
 
-[Glossary 34](#glossary)
+[Glossary](#glossary)
 
 Purpose
 =======
@@ -107,8 +105,7 @@ environment and who monitors which layers. Also, it provides a sample of
 the monitoring areas these roles may monitor.
 
 ![A screenshot of a cell phone Description automatically
-generated](./media/image1.png){width="7.5in"
-height="3.1395833333333334in"}
+generated](./media/image1.png)
 
 Pic 1: Different TKGI environment layers and the monitoring
 responsibility of the different teams
@@ -124,8 +121,7 @@ layer of a TKGI environment. This list is an example list and does not
 include all the possible metrics to watch in the environment.
 
 ![A screenshot of a cell phone Description automatically
-generated](./media/image2.png){width="7.5in"
-height="3.1958333333333333in"}
+generated](./media/image2.png)
 
 Pic 2: A sample list of metrics to monitor in the different TKGI
 environment layers
@@ -137,8 +133,7 @@ The below picture provides a pictorial view of different TKGI layers and
 the choice of VMware tools used to monitor those layers.
 
 ![A screenshot of a cell phone Description automatically
-generated](./media/image3.png){width="7.5in"
-height="2.951388888888889in"}
+generated](./media/image3.png)
 
 Pic 3: Different TKGI environment layers and the VMware tools to monitor
 those
@@ -156,8 +151,7 @@ monitor those, and the general flow of troubleshooting issues in TKGI
 overall environment.
 
 ![A screenshot of a cell phone Description automatically
-generated](./media/image4.png){width="7.5in"
-height="3.0648140857392825in"}
+generated](./media/image4.png)
 
 Pic 4: General flow of troubleshooting issues in TKGI overall
 environment
@@ -169,8 +163,7 @@ To showcase and explore existing options please follow the path,
 products and information provided in the below picture.
 
 ![A screenshot of a cell phone Description automatically
-generated](./media/image5.png){width="7.498947944006999in"
-height="3.2222222222222223in"} Pic 5: Existing options in different
+generated](./media/image5.png) Pic 5: Existing options in different
 VMware products to monitor a TKGI environment
 
 Missing Layer from Monitoring
@@ -184,8 +177,7 @@ of the box solution available to monitor specifically the TKGI control
 plane/management plane components. Let's focus on that layer now.
 
 ![A screenshot of a cell phone Description automatically
-generated](./media/image6.png){width="7.499448818897638in"
-height="3.1479166666666667in"}
+generated](./media/image6.png)
 
 Pic 6: Missing layer in TKGI monitoring
 
@@ -202,8 +194,7 @@ the different components and the primary services that we need to
 monitor.
 
 ![A screenshot of a cell phone Description automatically
-generated](./media/image7.png){width="7.499522090988626in"
-height="4.129629265091864in"}
+generated](./media/image7.png)
 
 Pic 7: TKGI Control Plane components and major services
 
@@ -246,18 +237,16 @@ Environment
 
 This document was prepared based on the following products and versions.
 
-  Product                       Component                                                             Version
-
-  ----------------------------- --------------------------------------------------------------------- ------------------
-
-  vRealize Operations Manager   Core Product                                                          8.1
-                                VMware vRealize Operations Management Pack for Container Monitoring   1.4.3.15987816
-                                SDDC Management Health                                                8.1.15995854
-                                NSX-T Management Pack (Default out of the box)                        8.1.15972155
-  vRealize Network Insight      Core Product                                                          5.2.0.1585846638
-  vRealize Log Insight          Core Product                                                          8.1.0-15994158
-                                VMware - Enterprise PKS (Community Supported)                         1.0
-                                VMware - NSX-T                                                        3.8.2
+| Product     |   Component     |       Version|
+|-------------|-----------------|---------------|
+|vRealize Operations Manager |  Core Product  | 8.1 |
+|  | VMware vRealize Operations Management Pack for Container Monitoring | 1.4.3.15987816 |
+| | SDDC Management Health   | 8.1.15995854
+| | NSX-T Management Pack (Default out of the box) | 8.1.15972155
+| vRealize Network Insight | Core Product | 5.2.0.1585846638
+|vRealize Log Insight | Core Product  | 8.1.0-15994158
+| | VMware - Enterprise PKS (Community Supported) | 1.0
+| | VMware - NSX-T | 3.8.2
 
 Result -- How it would look
 ===========================
@@ -267,8 +256,7 @@ a look at what we want to achieve. Provided below is a picture showing
 the flow of the custom solutions in different products.
 
 ![A picture containing clock Description automatically
-generated](./media/image9.png){width="7.5in"
-height="1.8597222222222223in"}
+generated](./media/image9.png)
 
 Pic 8: Flow of different custom dashboard in various products
 
@@ -279,8 +267,7 @@ Let's start with a Customer Dashboard in vRealize Operations Manager
 (vROps).
 
 ![A screenshot of a cell phone Description automatically
-generated](./media/image10.png){width="7.5in"
-height="4.694444444444445in"}
+generated](./media/image10.png)
 
 Pic 9: TKGI Dashboard -- Custom Dashboard in vROps
 
@@ -290,26 +277,22 @@ vRealize Network Insight
 Next, we have a custom dashboard configured in vRealize Network Insight.
 
 ![A screenshot of a video game Description automatically
-generated](./media/image11.png){width="7.5in"
-height="4.963888888888889in"}
+generated](./media/image11.png)
 
 Pic 10: TKGI-Group-1 Dashboard -- Custom Dashboard in vRNI -- pic 1
 
 ![A screen shot of a social media post Description automatically
-generated](./media/image12.png){width="7.5in"
-height="5.9743055555555555in"}
+generated](./media/image12.png)
 
 Pic 11: TKGI-Group-1 Dashboard -- Custom Dashboard in vRNI -- pic 2
 
 ![A screenshot of a computer Description automatically
-generated](./media/image13.png){width="7.5in"
-height="4.981944444444444in"}
+generated](./media/image13.png)
 
 Pic 12: TKGI-Group-1 Dashboard -- Custom Dashboard in vRNI -- pic 3
 
 ![A screenshot of a cell phone Description automatically
-generated](./media/image14.png){width="7.5in"
-height="1.9638888888888888in"}
+generated](./media/image14.png)
 
 Pic 13: TKGI-Group-1 Dashboard -- Custom Dashboard in vRNI -- pic 4
 
@@ -319,20 +302,17 @@ vRealize Log Insight
 Next, we have a custom dashboard configured in vRealize Log Insight.
 
 ![A screenshot of a computer Description automatically
-generated](./media/image15.png){width="7.5in"
-height="3.548611111111111in"}
+generated](./media/image15.png)
 
 Pic 14: TKGI Dashboard -- Overall -- Custom Dashboard in vRLI -- pic 1
 
 ![A screenshot of a computer Description automatically
-generated](./media/image16.png){width="7.499496937882765in"
-height="3.2407403762029747in"}
+generated](./media/image16.png)
 
 Pic 15: TKGI NSX-T Dashboard -- Custom Dashboard in vRLI -- pic 2
 
 ![A screenshot of a computer Description automatically
-generated](./media/image17.png){width="7.5in"
-height="4.425926290463692in"}
+generated](./media/image17.png)
 
 Pic 16: TKGI - Audit Dashboard Custom Dashboard in vRLI -- pic 3
 
@@ -351,8 +331,7 @@ provided below is a picture depicting different TKGI layers and their
 relationships in the dashboard.
 
 ![A screenshot of a social media post Description automatically
-generated](./media/image18.png){width="7.5in"
-height="3.5076924759405075in"}
+generated](./media/image18.png)
 
 Pic 17: Custom dashboard components and relationships
 
@@ -398,13 +377,11 @@ three custom group type. Create three custom group type by going to
 Administration Configuration Group Types ADD. Name and purpose for the
 group types are provided below.
 
-  Name of the group type   Purpose
-
-  ------------------------ ----------------------------------------------------------------------------------
-
-  NSX-T MGMT               Will be used to group together all the NSX-T environments
-  TKGI-MGMT                Will be used to group together all the control plane objects of TKGI Cluster
-  TKGI Group               Will be used to group together the "NSX-T MGMT" and TKGI-MGMT type group objects
+| Name of the group type | Purpose
+|------------------------|-------------
+| NSX-T MGMT    | Will be used to group together all the NSX-T environments
+| TKGI-MGMT     |Will be used to group together all the control plane objects of TKGI Cluster
+| TKGI Group    | Will be used to group together the "NSX-T MGMT" and TKGI-MGMT type group objects
 
 Table 1: Group Type details
 
@@ -414,13 +391,11 @@ Next, we will configure custom groups. Go to Environment Environment
 Overview Custom Groups ADD to add custom groups. We will configure three
 custom groups.
 
-  Name of the custom group   Purpose
-
-  -------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-  TKGI Group-1               Used to represent Layer 1 objects depicted in Pic 17. Groups together TKGI MGMT and NSX-T environment components. Shows overall health of an environment.
-  TKGI Management-1          Used to represent Layer 2 objects depicted in Pic 17. Groups together TKGI MGMT components. Shows overall health of TKGI control plane components.
-  NSX-T Environment-1        Used to represent Layer 2 objects depicted in Pic 17. Groups together NSX-T control plane components. Shows overall health of NSX-T control plane objects.
+| Name of the custom group | Purpose |
+|---------------------------|---------|
+|TKGI Group-1  | Used to represent Layer 1 objects depicted in Pic 17. Groups together TKGI MGMT and NSX-T environment components. Shows overall health of an environment.
+|TKGI Management-1  | Used to represent Layer 2 objects depicted in Pic 17. Groups together TKGI MGMT components. Shows overall health of TKGI control plane components.
+|NSX-T Environment-1 | Used to represent Layer 2 objects depicted in Pic 17. Groups together NSX-T control plane components. Shows overall health of NSX-T control plane objects.
 
 Table 2: Custom Group Type details
 
@@ -450,14 +425,10 @@ Define Membership Criteria:
   
   - Properties(Summary\|Configuration\|Product Name) contains Ops
     Manager
+    
+    AND
+  - Relationship Descendant of is Cluster Name (e.g. RegionA01-MGMT)
 
-> AND
-
-- Relationship Descendant of is Cluster Name (e.g. RegionA01-MGMT)
-
-```{=html}
-<!-- -->
-```
 
 - Bosh
   
@@ -465,14 +436,10 @@ Define Membership Criteria:
   
   - Properties(Summary\|Custom Tag:instance\_group\|Value) contains
     bosh
+    
+    AND
 
-> AND
-
-- Relationship Descendant of is Cluster Name (e.g. RegionA01-MGMT)
-
-```{=html}
-<!-- -->
-```
+  - Relationship Descendant of is Cluster Name (e.g. RegionA01-MGMT)
 
 - Harbor App
   
@@ -480,14 +447,11 @@ Define Membership Criteria:
   
   - Properties(Summary\|Configuration\|Product Name) contains
     harbor-app
+    
+    AND
 
-> AND
+  - Relationship Descendant of is Cluster Name (e.g. RegionA01-MGMT)
 
-- Relationship Descendant of is Cluster Name (e.g. RegionA01-MGMT)
-
-```{=html}
-<!-- -->
-```
 
 - PKS DB
   
@@ -495,13 +459,10 @@ Define Membership Criteria:
   
   - Properties(Summary\|Configuration\|Product Name) contains pks-db
 
-> AND
+    AND
 
-- Relationship Descendant of is Cluster Name (e.g. RegionA01-MGMT)
+  - Relationship Descendant of is Cluster Name (e.g. RegionA01-MGMT)
 
-```{=html}
-<!-- -->
-```
 
 - Pivotal-container-service (PKS API)
   
@@ -509,14 +470,11 @@ Define Membership Criteria:
   
   - Properties(Summary\|Configuration\|Product Name) contains
     pivotal-container-service
+    
+    AND
 
-> AND
+  - Relationship Descendant of is Cluster Name (e.g. RegionA01-MGMT)
 
-- Relationship Descendant of is Cluster Name (e.g. RegionA01-MGMT)
-
-```{=html}
-<!-- -->
-```
 
 - Enterprise PKS (EPMC)
   
@@ -525,9 +483,9 @@ Define Membership Criteria:
   - Properties(Summary\|Configuration\|Product Name) contains
     Enterprise PKS
 
-> AND
+    AND
 
-- Relationship Descendant of is Cluster Name (e.g. RegionA01-MGMT)
+  - Relationship Descendant of is Cluster Name (e.g. RegionA01-MGMT)
 
 **Please note,** in my case, the distinction between the environments is
 the cluster name. In a cluster I will host only a single TKGI
@@ -546,8 +504,7 @@ group only (based on the selection criteria).
 A sample screenshot is provided below.
 
 ![A screenshot of a cell phone Description automatically
-generated](./media/image19.png){width="7.5in"
-height="5.920833333333333in"}
+generated](./media/image19.png)
 
 Pic 18: Details of custom group TKGI Management-1
 
@@ -569,14 +526,11 @@ Define Membership Criteria:
   
   - Properties(Summary\|Configuration\|Product Name) contains
     nsx-unified-appliance
+  
+    AND
 
-> AND
+  - Relationship Descendant of is Cluster Name (e.g. RegionA01-MGMT)
 
-- Relationship Descendant of is Cluster Name (e.g. RegionA01-MGMT)
-
-```{=html}
-<!-- -->
-```
 
 - NSX Edges
   
@@ -585,9 +539,9 @@ Define Membership Criteria:
   - Properties(Summary\|Configuration\|Product Name) contains
     nsx-edge
 
-> AND
+    AND
 
-- Relationship Descendant of is Cluster Name (e.g. RegionA01-MGMT)
+  - Relationship Descendant of is Cluster Name (e.g. RegionA01-MGMT)
 
 **Please note,** in my case, the distinction between the environments is
 the cluster name. In a cluster, I will host only a single NSX-T
@@ -607,8 +561,7 @@ Anyways, for multiple NSX-T environment, create multiple groups like
 A sample screenshot is provided below:
 
 ![A screenshot of a cell phone Description automatically
-generated](./media/image20.png){width="7.5in"
-height="5.913194444444445in"}
+generated](./media/image20.png)
 
 Pic 19: Details of custom group NSX-T Environment-1
 
@@ -618,8 +571,7 @@ Purpose of this custom item is to group all the elements of the TKGI
 environment. Details for the custom group is provided below:
 
 ![A screenshot of a cell phone Description automatically
-generated](./media/image21.png){width="7.5in"
-height="5.942361111111111in"}
+generated](./media/image21.png)
 
 Pic 20: Details of custom group TKGI Group-1
 
@@ -642,25 +594,14 @@ custom groups and the environment.
 Go to **Administration Configuration Object Relationship** and make sure
 the following relationships exist:
 
-+----------------------------------+----------------------------------+
+
 | **Parent Selection**             | **Children**                     |
-+==================================+==================================+
-| TKGI Group-1 (under TKGI Group)  | -   NSX-T Environment-1          |
-|                                  |                                  |
-|                                  | -   TKGI Management-1            |
-+----------------------------------+----------------------------------+
-| TKGI Management-1 (under         | Shows all the 6 components of    |
-| TKGI-MGMT)                       | TKGI control plane (epmc,        |
-|                                  | opsman, bosh, harbor, pks-db,    |
-|                                  | pks api)                         |
-+----------------------------------+----------------------------------+
-| NSX-T Environment-1 (under NSX-T | Shows all the management         |
-| MGMT)                            | component of NSX-T environment   |
-|                                  | (nsx manager and nsx edge)       |
-+----------------------------------+----------------------------------+
-| RegionA01-MGMT (cluster under    | Should contain TKGI Group-1      |
-| Cluster Compute Resource)        | apart from other children        |
-+----------------------------------+----------------------------------+
+|----------------------------------|----------------------------------|
+| TKGI Group-1 (under TKGI Group)  | NSX-T Environment-1          |
+|                                  | TKGI Management-1            |
+| TKGI Management-1 (under TKGI-MGMT) | Shows all the 6 components of TKGI control plane (epmc,opsman, bosh, harbor, pks-db, pks api)                         |
+| NSX-T Environment-1 (under NSX-T MGMT) | Shows all the management component of NSX-T environment (nsx manager and nsx edge)       |
+| RegionA01-MGMT (cluster under Cluster Compute Resource)    | Should contain TKGI Group-1 apart from other children        |
 
 Table 3: Object Relationship details
 
@@ -671,8 +612,7 @@ accordingly. The major relationship that you need to configure is add
 it from right side list to the top of the box.
 
 ![A screenshot of a cell phone Description automatically
-generated](./media/image22.png){width="6.315384951881015in"
-height="4.6305555555555555in"}
+generated](./media/image22.png)
 
 Pic 21: A sample screenshot is provided
 
@@ -762,8 +702,7 @@ that enabled, then, for the other VM's get their names from vROps and
 provide the value here. A sample screenshot is provided below:
 
 ![A screenshot of a cell phone Description automatically
-generated](./media/image25.png){width="7.5in"
-height="5.3518525809273845in"}
+generated](./media/image25.png)
 
 Pic 22: Sample picture of Application TKGI-MGMT-1
 
@@ -776,8 +715,7 @@ Next, we click on the application name and it opens the application on
 another tab.
 
 ![A screenshot of a cell phone Description automatically
-generated](./media/image26.png){width="7.5in"
-height="5.095833333333333in"}
+generated](./media/image26.png)
 
 Pic 23: Click on the application name.
 
@@ -786,8 +724,7 @@ One thing remains is to create a pinboard and add the required views in
 the new pinboard.
 
 ![A screenshot of a cell phone Description automatically
-generated](./media/image27.png){width="7.5in"
-height="0.9590277777777778in"}
+generated](./media/image27.png)
 
 Pic 24: Widgets in the new application page.
 
@@ -796,8 +733,9 @@ right corner. This will ask you to add the widget to an existing
 pinboard or create a new pinboard. Click on Create New Pinboard link.
 
 ![A screenshot of a cell phone Description automatically
-generated](./media/image28.png){width="7.5in"
-height="4.190972222222222in"} Pic 25: Create new pinboard.
+generated](./media/image28.png)
+
+Pic 25: Create new pinboard.
 
 Provide the name as "TKGI-Group-1" as the pinboard name and click on
 Create and Pin.
@@ -881,8 +819,7 @@ are provided below:
      - Text contains error create deployment for instance
 
 ![A screenshot of a cell phone Description automatically
-generated](./media/image29.png){width="7.5in"
-height="1.4034722222222222in"}
+generated](./media/image29.png)
 
 Pic 26: TKGI Cluster Creation Failed widget query
 
@@ -915,7 +852,7 @@ Pic 26: TKGI Cluster Creation Failed widget query
      - text contains failing unresponsive changed from running to
        failing
 
-![](./media/image30.png){width="7.5in" height="0.8236111111111111in"}
+![](./media/image30.png)
 
 7. TKGI: Deployment Failures - Attach Volume Issues
    
@@ -1039,8 +976,7 @@ are provided below:
      - Text contains pks.cluster.admin pks-admin pks\_cli
 
 ![A screenshot of a cell phone Description automatically
-generated](./media/image31.png){width="7.5in"
-height="1.6805555555555556in"}
+generated](./media/image31.png)
 
 4. Successful Cluster Credential Retrieval
    
@@ -1092,14 +1028,11 @@ The following people helped in creating the content for this document:
 Glossary
 ========
 
-  ----------------- -------------------------------------
+|  VMware Acronyms |  Detailed Explanation|
+|------------------|----------------------|
+|  TKGI             | Tanzu Kubernetes Grid Integrated
+|  TKGO             | Tanzu Kubernetes Grid Observability
+|  vROps            | vRealize Operations Manager
+|  vRNI              |vRealize Network Insight
+|  vRLI              |vRealize Log Insight
 
-  VMware Acronyms   Detailed Explanation
-  Acronyms          Explanation
-  TKGI              Tanzu Kubernetes Grid Integrated
-  TKGO              Tanzu Kubernetes Grid Observability
-  vROps             vRealize Operations Manager
-  vRNI              vRealize Network Insight
-  vRLI              vRealize Log Insight
-
-  ----------------- -------------------------------------
