@@ -1,3 +1,9 @@
+VMware Advanced Customer Engagements (ACE) Team
+
+Authored by Sajal Debnath
+
+June 2020
+
 Table of contents
 =================
 
