@@ -1,0 +1,285 @@
+{
+  "name":"TKGI Dashboards",
+  "namespace":"com.vmware.vrli",
+  "contentPackId":"com.vmware.vrli",
+  "framework":"#9c4",
+  "version":"2.4",
+  "extractedFields":[ {
+    "displayName":"vmw_nsxt_event_state",
+    "preContext":"\"event_state\":\\s?",
+    "postContext":"(,|})",
+    "regexValue":"\\S+?",
+    "internalName":"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45c7on2gc5df",
+    "constraints":"{\"searchTerms\":\"comp subcomp NSX\"}",
+    "info":null
+  }, {
+    "displayName":"vmw_nsxt_eventid",
+    "preContext":"eventId=\"",
+    "postContext":"\"",
+    "regexValue":"\\S+",
+    "internalName":"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45djmq000000",
+    "constraints":"{\"searchTerms\":\"comp subcomp NSX\"}",
+    "info":null
+  } ],
+  "queries":[ ],
+  "alerts":[ ],
+  "dashboardSections":[ {
+    "views":[ {
+      "name":"TKGI Dashboard - Overall",
+      "constraints":[ ],
+      "rows":[ {
+        "widgets":[ {
+          "name":"TKGI Cluster Creation Failed",
+          "info":"",
+          "chartType":null,
+          "chartOptions":"{\"logaxis\":false,\"trendline\":false,\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"bosh\",\"startTimeMillis\":1589400518353,\"endTimeMillis\":1590005318390,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"text\",\"operator\":\"CONTAINS\",\"value\":\"description: create deployment result: action failed\"},{\"internalName\":\"text\",\"operator\":\"CONTAINS\",\"value\":\"error create deployment for instance\"}],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[]}",
+          "messageQuery":null
+        }, {
+          "name":"Error when deploying TKGI Control Plane VMs",
+          "info":"",
+          "chartType":null,
+          "chartOptions":"{\"logaxis\":false,\"trendline\":false,\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"\",\"startTimeMillis\":1589832849839,\"endTimeMillis\":1590005650763,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"text\",\"operator\":\"CONTAINS\",\"value\":\"Error: Unknown CPI error 'Unknown' with message 'execution expired' in 'create_stemcell' CPI method\"}],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[]}",
+          "messageQuery":null
+        }, {
+          "name":"User Created Event",
+          "info":"",
+          "chartType":null,
+          "chartOptions":"{\"logaxis\":false,\"trendline\":false,\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"UserCreatedEvent\",\"startTimeMillis\":1588738590761,\"endTimeMillis\":1588824991553,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[]}",
+          "messageQuery":null
+        } ]
+      }, {
+        "widgets":[ {
+          "name":"User Deleted Event",
+          "info":"",
+          "chartType":null,
+          "chartOptions":"{\"logaxis\":false,\"trendline\":false,\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"UserDeletedEvent\",\"startTimeMillis\":1588738614714,\"endTimeMillis\":1588825015671,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[]}",
+          "messageQuery":null
+        }, {
+          "name":"Container Created",
+          "info":"",
+          "chartType":null,
+          "chartOptions":"{\"logaxis\":false,\"trendline\":false,\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"Started container\",\"startTimeMillis\":1588220963480,\"endTimeMillis\":1588825764026,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[]}",
+          "messageQuery":null
+        }, {
+          "name":"Bosh_Service-Instance - Issues",
+          "info":"",
+          "chartType":null,
+          "chartOptions":"{\"logaxis\":false,\"trendline\":false,\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"\",\"startTimeMillis\":1589832738703,\"endTimeMillis\":1590005538799,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"bosh_deployment\",\"operator\":\"CONTAINS\",\"value\":\"service-instance_\"},{\"internalName\":\"text\",\"operator\":\"CONTAINS\",\"value\":\"failing,unresponsive,changed from running to failing\"}],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[]}",
+          "messageQuery":null
+        } ]
+      }, {
+        "widgets":[ {
+          "name":"TKGI: Deployment Failures - Attach Volume Issues",
+          "info":"",
+          "chartType":null,
+          "chartOptions":"{\"logaxis\":false,\"trendline\":false,\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"\",\"startTimeMillis\":1589833036271,\"endTimeMillis\":1590005836729,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"text\",\"operator\":\"CONTAINS\",\"value\":\"FailedAttachVolume\"}],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[]}",
+          "messageQuery":null
+        }, {
+          "name":"Crash Loop Back Off",
+          "info":"",
+          "chartType":null,
+          "chartOptions":"{\"logaxis\":false,\"trendline\":false,\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"Back-off restarting failed container\",\"startTimeMillis\":1588220932682,\"endTimeMillis\":1588825732974,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[]}",
+          "messageQuery":null
+        }, {
+          "name":"Image Pull Back Off",
+          "info":"",
+          "chartType":null,
+          "chartOptions":"{\"logaxis\":false,\"trendline\":false,\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"Error:ErrImagePull\",\"startTimeMillis\":1588220891608,\"endTimeMillis\":1588825692264,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[]}",
+          "messageQuery":null
+        } ]
+      } ]
+    }, {
+      "name":"TKGI <--> NSX-T Dashboard",
+      "constraints":[ ],
+      "rows":[ {
+        "widgets":[ {
+          "name":"DHCP Pool Overload NSX-T",
+          "info":"",
+          "chartType":null,
+          "chartOptions":"{\"logaxis\":false,\"trendline\":false,\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"\",\"startTimeMillis\":1587964547534,\"endTimeMillis\":1590002439644,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45djmq000000\",\"operator\":\"CONTAINS\",\"value\":\"vmwNSXDhcpPoolUsageOverloadedEvent\"},{\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45c7on2gc5df\",\"operator\":\"MATCH\",\"value\":\"^1$\"}],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[{\"displayName\":\"vmw_nsxt_event_state\",\"preContext\":\"\\\"event_state\\\":\\\\s?\",\"postContext\":\"(,|})\",\"regexValue\":\"\\\\S+?\",\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45c7on2gc5df\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp NSX\\\"}\"},{\"displayName\":\"vmw_nsxt_eventid\",\"preContext\":\"eventId=\\\"\",\"postContext\":\"\\\"\",\"regexValue\":\"\\\\S+\",\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45djmq000000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp NSX\\\"}\"}]}",
+          "messageQuery":""
+        }, {
+          "name":"NSX-T Password Expiration",
+          "info":"",
+          "chartType":null,
+          "chartOptions":"{\"logaxis\":false,\"trendline\":false,\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"\",\"startTimeMillis\":1589829833133,\"endTimeMillis\":1590002634313,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45djmq000000\",\"operator\":\"CONTAINS\",\"value\":\"vmwNSXPlatformPasswordExpiryStatus\"},{\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45c7on2gc5df\",\"operator\":\"MATCH\",\"value\":\"^[12]?[0-9]|-\\\\d+$\"}],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[{\"displayName\":\"vmw_nsxt_event_state\",\"preContext\":\"\\\"event_state\\\":\\\\s?\",\"postContext\":\"(,|})\",\"regexValue\":\"\\\\S+?\",\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45c7on2gc5df\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp NSX\\\"}\"},{\"displayName\":\"vmw_nsxt_eventid\",\"preContext\":\"eventId=\\\"\",\"postContext\":\"\\\"\",\"regexValue\":\"\\\\S+\",\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45djmq000000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp NSX\\\"}\"}]}",
+          "messageQuery":""
+        }, {
+          "name":"NSX-T Certificate Expiration",
+          "info":"",
+          "chartType":null,
+          "chartOptions":"{\"logaxis\":false,\"trendline\":false,\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"\",\"startTimeMillis\":1587964547534,\"endTimeMillis\":1590003911930,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45djmq000000\",\"operator\":\"CONTAINS\",\"value\":\"vmwNSXPlatformCertificateExpiryStatus\"},{\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45c7on2gc5df\",\"operator\":\"MATCH\",\"value\":\"^[12]?[0-9]|-\\\\d+$\"}],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[{\"displayName\":\"vmw_nsxt_event_state\",\"preContext\":\"\\\"event_state\\\":\\\\s?\",\"postContext\":\"(,|})\",\"regexValue\":\"\\\\S+?\",\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45c7on2gc5df\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp NSX\\\"}\"},{\"displayName\":\"vmw_nsxt_eventid\",\"preContext\":\"eventId=\\\"\",\"postContext\":\"\\\"\",\"regexValue\":\"\\\\S+\",\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45djmq000000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp NSX\\\"}\"}]}",
+          "messageQuery":""
+        } ]
+      }, {
+        "widgets":[ {
+          "name":"NSX-T DNS Forwarder Status",
+          "info":"",
+          "chartType":null,
+          "chartOptions":"{\"logaxis\":false,\"trendline\":false,\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"\",\"startTimeMillis\":1587964547534,\"endTimeMillis\":1590004026308,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45djmq000000\",\"operator\":\"CONTAINS\",\"value\":\"vmwNSXDnsForwaderStatus\"},{\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45c7on2gc5df\",\"operator\":\"MATCH\",\"value\":\"^[12]?[0-9]|-\\\\d+$\"}],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[{\"displayName\":\"vmw_nsxt_event_state\",\"preContext\":\"\\\"event_state\\\":\\\\s?\",\"postContext\":\"(,|})\",\"regexValue\":\"\\\\S+?\",\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45c7on2gc5df\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp NSX\\\"}\"},{\"displayName\":\"vmw_nsxt_eventid\",\"preContext\":\"eventId=\\\"\",\"postContext\":\"\\\"\",\"regexValue\":\"\\\\S+\",\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45djmq000000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp NSX\\\"}\"}]}",
+          "messageQuery":""
+        }, {
+          "name":"NSX-T BGP Neighbor Status",
+          "info":"",
+          "chartType":null,
+          "chartOptions":"{\"logaxis\":false,\"trendline\":false,\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"\",\"startTimeMillis\":1589832086439,\"endTimeMillis\":1590004887403,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45djmq000000\",\"operator\":\"CONTAINS\",\"value\":\"vmwNSXRoutingBgpNeighborStatus\"},{\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45c7on2gc5df\",\"operator\":\"MATCH\",\"value\":\"^0$\"}],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[{\"displayName\":\"vmw_nsxt_event_state\",\"preContext\":\"\\\"event_state\\\":\\\\s?\",\"postContext\":\"(,|})\",\"regexValue\":\"\\\\S+?\",\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45c7on2gc5df\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp NSX\\\"}\"},{\"displayName\":\"vmw_nsxt_eventid\",\"preContext\":\"eventId=\\\"\",\"postContext\":\"\\\"\",\"regexValue\":\"\\\\S+\",\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45djmq000000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp NSX\\\"}\"}]}",
+          "messageQuery":""
+        }, {
+          "name":"NSX-T DHCP pool lease allocation failed/succeeded",
+          "info":"",
+          "chartType":null,
+          "chartOptions":"{\"logaxis\":false,\"trendline\":false,\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"\",\"startTimeMillis\":1589832180611,\"endTimeMillis\":1590004981443,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45djmq000000\",\"operator\":\"CONTAINS\",\"value\":\"vmwNSXDhcpPoolUsageOveroadedEvent\"},{\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45c7on2gc5df\",\"operator\":\"MATCH\",\"value\":\"^1$\"}],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[{\"displayName\":\"vmw_nsxt_event_state\",\"preContext\":\"\\\"event_state\\\":\\\\s?\",\"postContext\":\"(,|})\",\"regexValue\":\"\\\\S+?\",\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45c7on2gc5df\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp NSX\\\"}\"},{\"displayName\":\"vmw_nsxt_eventid\",\"preContext\":\"eventId=\\\"\",\"postContext\":\"\\\"\",\"regexValue\":\"\\\\S+\",\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45djmq000000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp NSX\\\"}\"}]}",
+          "messageQuery":""
+        } ]
+      }, {
+        "widgets":[ {
+          "name":"NSX-T Fabric Crypto Status",
+          "info":"",
+          "chartType":null,
+          "chartOptions":"{\"logaxis\":false,\"trendline\":false,\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"\",\"startTimeMillis\":1589832267944,\"endTimeMillis\":1590005068573,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45djmq000000\",\"operator\":\"CONTAINS\",\"value\":\"vmwNSXFabricCryptoStatus\"},{\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45c7on2gc5df\",\"operator\":\"MATCH\",\"value\":\"^[2-9]|\\\\d{2,}$\"}],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[{\"displayName\":\"vmw_nsxt_event_state\",\"preContext\":\"\\\"event_state\\\":\\\\s?\",\"postContext\":\"(,|})\",\"regexValue\":\"\\\\S+?\",\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45c7on2gc5df\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp NSX\\\"}\"},{\"displayName\":\"vmw_nsxt_eventid\",\"preContext\":\"eventId=\\\"\",\"postContext\":\"\\\"\",\"regexValue\":\"\\\\S+\",\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45djmq000000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp NSX\\\"}\"}]}",
+          "messageQuery":""
+        }, {
+          "name":"NSX-T Pool MGMT",
+          "info":"",
+          "chartType":null,
+          "chartOptions":"{\"logaxis\":false,\"trendline\":false,\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"\",\"startTimeMillis\":1589833378674,\"endTimeMillis\":1590006178673,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"text\",\"operator\":\"CONTAINS\",\"value\":\"pool-mgmt\"},{\"internalName\":\"text\",\"operator\":\"CONTAINS\",\"value\":\"poolusage\"},{\"internalName\":\"text\",\"operator\":\"CONTAINS\",\"value\":\"nsxmgr*\"},{\"internalName\":\"text\",\"operator\":\"CONTAINS\",\"value\":\"100 ips out of 239 total ips\"}],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[]}",
+          "messageQuery":""
+        }, {
+          "name":"BFD Tunnel Status ",
+          "info":"(If customer decides to use ENABLE BFD on NSX Tier0 and physical switch)",
+          "chartType":null,
+          "chartOptions":"{\"logaxis\":false,\"trendline\":false,\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"\",\"startTimeMillis\":1589833187449,\"endTimeMillis\":1590005988184,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45djmq000000\",\"operator\":\"CONTAINS\",\"value\":\"vmwNSXBfdTunnelStatus\"},{\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45c7on2gc5df\",\"operator\":\"MATCH\",\"value\":\"^[3-9]|\\\\d{2,}$\"}],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[{\"displayName\":\"vmw_nsxt_event_state\",\"preContext\":\"\\\"event_state\\\":\\\\s?\",\"postContext\":\"(,|})\",\"regexValue\":\"\\\\S+?\",\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45c7on2gc5df\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp NSX\\\"}\"},{\"displayName\":\"vmw_nsxt_eventid\",\"preContext\":\"eventId=\\\"\",\"postContext\":\"\\\"\",\"regexValue\":\"\\\\S+\",\"internalName\":\"ibadcnk7mnxw2ltwnv3wc4tffz3he3djozwxox3oon4hix3fozsw45djmq000000\",\"constraints\":\"{\\\"searchTerms\\\":\\\"comp subcomp NSX\\\"}\"}]}",
+          "messageQuery":""
+        } ]
+      } ]
+    }, {
+      "name":"TKGI - Audit",
+      "constraints":[ ],
+      "rows":[ {
+        "widgets":[ {
+          "name":"Successful Authentication",
+          "info":"",
+          "chartType":null,
+          "chartOptions":"{\"logaxis\":false,\"trendline\":false,\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"UserAuthenticationSuccess\",\"startTimeMillis\":1588738443692,\"endTimeMillis\":1588824843697,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[]}",
+          "messageQuery":null
+        }, {
+          "name":"Unsuccessful Authentication",
+          "info":"",
+          "chartType":null,
+          "chartOptions":"{\"logaxis\":false,\"trendline\":false,\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"UserAuthenticationFailure\",\"startTimeMillis\":1587964547534,\"endTimeMillis\":1590009497987,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[]}",
+          "messageQuery":""
+        } ]
+      }, {
+        "widgets":[ {
+          "name":"TKGI Admin Logins",
+          "info":"",
+          "chartType":null,
+          "chartOptions":"{\"logaxis\":false,\"trendline\":false,\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"\",\"startTimeMillis\":1589833616195,\"endTimeMillis\":1590006416616,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[{\"internalName\":\"text\",\"operator\":\"CONTAINS\",\"value\":\"pks.cluster.admin,pks-admin,pks_cli\"}],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[]}",
+          "messageQuery":null
+        }, {
+          "name":"Successful Cluster Credential Retrieval",
+          "info":"",
+          "chartType":null,
+          "chartOptions":"{\"logaxis\":false,\"trendline\":false,\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"ClientAuthenticationSuccess\",\"startTimeMillis\":1587964547534,\"endTimeMillis\":1590009557301,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[]}",
+          "messageQuery":null
+        } ]
+      }, {
+        "widgets":[ {
+          "name":"Cluster Creation",
+          "info":"",
+          "chartType":null,
+          "chartOptions":"{\"logaxis\":false,\"trendline\":false,\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"Action 'create-cluster'\",\"startTimeMillis\":1587964547534,\"endTimeMillis\":1590009266354,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[]}",
+          "messageQuery":null
+        }, {
+          "name":"Cluster Deletion",
+          "info":"",
+          "chartType":null,
+          "chartOptions":"{\"logaxis\":false,\"trendline\":false,\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"delete deployment for instance\",\"startTimeMillis\":1587964547534,\"endTimeMillis\":1590009317913,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[]}",
+          "messageQuery":null
+        } ]
+      }, {
+        "widgets":[ {
+          "name":"Telemetry Collection",
+          "info":"",
+          "chartType":null,
+          "chartOptions":"{\"logaxis\":false,\"trendline\":false,\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"telemetry-server\",\"startTimeMillis\":1587964547534,\"endTimeMillis\":1590009663205,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[]}",
+          "messageQuery":null
+        }, {
+          "name":"User Deletion",
+          "info":"",
+          "chartType":null,
+          "chartOptions":"{\"logaxis\":false,\"trendline\":false,\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"UserDeletedEvent\",\"startTimeMillis\":1587964547534,\"endTimeMillis\":1590009609487,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[]}",
+          "messageQuery":null
+        }, {
+          "name":"User Creation",
+          "info":"",
+          "chartType":null,
+          "chartOptions":"{\"logaxis\":false,\"trendline\":false,\"spline\":false}",
+          "widgetType":"chart",
+          "chartQuery":"{\"query\":\"UserCreatedEvent\",\"startTimeMillis\":1587964547534,\"endTimeMillis\":1590009587190,\"piqlFunctionGroups\":[{\"functions\":[{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false}],\"field\":null}],\"dateFilterPreset\":\"CUSTOM\",\"shouldGroupByTime\":true,\"includeAllContentPackFields\":true,\"eventSortOrder\":\"DESC\",\"summarySortOrder\":\"DESC\",\"compareQueryOrderBy\":\"TREND\",\"compareQuerySortOrder\":\"DESC\",\"compareQueryOptions\":null,\"messageViewType\":\"EVENTS\",\"constraintToggle\":\"ALL\",\"piqlFunction\":{\"label\":\"Count\",\"value\":\"COUNT\",\"requiresField\":false,\"numericOnly\":false},\"piqlFunctionField\":null,\"fieldConstraints\":[],\"supplementalConstraints\":[],\"groupByFields\":[],\"contentPacksToIncludeFields\":[],\"extractedFields\":[]}",
+          "messageQuery":null
+        } ]
+      } ]
+    } ],
+    "header":""
+  } ],
+  "aliasFields":[ ],
+  "aliasRules":[ ],
+  "author":"Sajal Debnath",
+  "url":"",
+  "contentVersion":"1.0",
+  "info":"These dashboards contains custom dashboard prepared for monitoring TKGI environments",
+  "instructions":"Install and configure NSX-T Management Pack.<br>Also install and configure TKGI Management Pack from code.vmware.com"
+}
