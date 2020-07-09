@@ -4,7 +4,7 @@ Authored by Sajal Debnath
 
 June 2020
 
-# Please check the updated document "Guidebook-for-Monitoring-VMware-TKGI-MGMT-Enviornment-v1.1.pdf" in the PDF format. The document and versions are updated by the information provided in readme.md is not updated. The original guide is updated.
+### Please check the updated document "Guidebook-for-Monitoring-VMware-TKGI-MGMT-Enviornment-v1.1.pdf" in the PDF format. The document and versions are updated by the information provided in readme.md is not updated. The original guide is updated.
 
 Table of contents
 =================
